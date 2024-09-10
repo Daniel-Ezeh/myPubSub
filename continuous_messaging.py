@@ -1,16 +1,15 @@
 import time
-import subprocess
 from datetime import datetime
 from google.cloud import pubsub_v1
 
 
 # Getting the project_id and topic_name
-command1 = "gcloud config get-value project"
-project_id = subprocess.run(command1, shell=True, capture_output=True, text=True)
+# command1 = "gcloud config get-value project"
+# project_id = subprocess.run(command1, shell=True, capture_output=True, text=True)
 project_id = "trying-pubsub-2024"
 
-command2 = 'gcloud pubsub topics list | grep "my" | rev | cut -d\'/\' -f1 | rev'
-topic_name  = subprocess.run(command2, shell=True, capture_output=True, text=True)
+# command2 = 'gcloud pubsub topics list | grep "my" | rev | cut -d\'/\' -f1 | rev'
+# topic_name  = subprocess.run(command2, shell=True, capture_output=True, text=True)
 topic_name = "myTopic"
 
 # Initializing a publisher client
